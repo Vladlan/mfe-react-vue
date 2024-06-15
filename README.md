@@ -1,8 +1,9 @@
-##REQUIREMENTS
 
-#nodejs 20
+# REQUIREMENTS
 
-npm install --force (in all packages)
+### nodejs 20
+
+`npm install --force` (in all packages)
 
 
 To run github actions locally use [act](https://github.com/nektos/act/blob/master/README.md):

@@ -1,0 +1,17 @@
+{
+  "name": "mfe-react-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:packages": "node scripts/clean-packages.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^10.4.1",
+    "rimraf": "^5.0.7"
+  }
+}

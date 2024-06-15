@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean:packages": "node scripts/clean-packages.js"
+    "clean:packages": "node scripts/clean-packages.js",
+    "upload-package-json-to-s3": "node scripts/upload-package-json-to-s3.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,9 @@
   "devDependencies": {
     "glob": "^10.4.1",
     "rimraf": "^5.0.7"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.598.0",
+    "dotenv": "^16.4.5"
   }
 }

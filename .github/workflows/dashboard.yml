@@ -26,7 +26,7 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws --endpoint-url ${{secrets.S3_ENDPOINT}} --profile tebi s3 sync /dist ${{secrets.S3_BUCKET_NAME}}/dashboard
+          aws --endpoint-url ${{secrets.S3_ENDPOINT}} s3 sync /dist ${{secrets.S3_BUCKET_NAME}}/dashboard
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.S3_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.S3_SECRET_ACCESS_KEY}}

@@ -1,5 +1,5 @@
 ##REQUIREMENTS
 
-#nodejs 18
+#nodejs 20
 
 npm install --force (in all packages)

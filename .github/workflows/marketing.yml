@@ -27,7 +27,7 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws --endpoint-url ${{secrets.S3_ENDPOINT}} s3 sync /dist ${{secrets.S3_BUCKET_NAME}}/marketing
+          aws s3 sync /dist s3://${{secrets.S3_BUCKET_NAME}}/marketing-$(grep '"version"' package.json | sed -E 's/.*"version": "([^"]+)".*/\1/') --endpoint-url ${{secrets.S3_ENDPOINT}}
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.S3_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.S3_SECRET_ACCESS_KEY}}

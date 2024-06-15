@@ -1,5 +1,6 @@
 <template>
   <div class="p-grid p-fluid dashboard">
+    <h1>MFE Dashboard</h1>
     <div class="p-col-12 p-lg-4">
       <div class="card summary">
         <span class="title">Users</span>

@@ -4,6 +4,7 @@ import {
   StylesProvider,
   createGenerateClassName,
 } from "@material-ui/core/styles";
+import Typography from '@material-ui/core/Typography';
 
 import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
@@ -15,6 +16,15 @@ const generateClassName = createGenerateClassName({
 export default ({ history }) => {
   return (
     <div style={{ border: "1px solid red" }}>
+      <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          MFE Marketing
+        </Typography>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>

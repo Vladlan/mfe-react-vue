@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
+const webpack = require('webpack');
 
 const prodConfig = {
   mode: 'production',
@@ -10,6 +11,7 @@ const prodConfig = {
     publicPath: '/dashboard/latest/',
   },
   plugins: [
+    new webpack.ProgressPlugin(),
     new ModuleFederationPlugin({
       name: 'dashboard',
       filename: 'remoteEntry.js',

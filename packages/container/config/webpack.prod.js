@@ -2,8 +2,9 @@ const { merge } = require('webpack-merge');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
+const webpack = require('webpack');
 
-const domain = process.env.PRODUCTION_DOMAIN;
+const domain = process.env.S3_ENDPOINT;
 
 const prodConfig = {
   mode: 'production',
@@ -12,6 +13,7 @@ const prodConfig = {
     publicPath: '/container/latest/',
   },
   plugins: [
+    new webpack.ProgressPlugin(),
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {

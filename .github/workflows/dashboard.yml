@@ -1,6 +1,7 @@
 name: deploy-dashboard
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
